@@ -39,6 +39,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Invader_02
       objectReference: {fileID: 0}
+    - target: {fileID: 7176317579599218537, guid: 054cb7790fc6c5844960582099e8cee6, type: 3}
+      propertyPath: effectPrefab
+      value: 
+      objectReference: {fileID: 7374837013538936239, guid: ce5ff7717a35063479b3a98939ee3e76, type: 3}
     - target: {fileID: 8456145380266255264, guid: 054cb7790fc6c5844960582099e8cee6, type: 3}
       propertyPath: m_RootOrder
       value: 0
