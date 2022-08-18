@@ -1954,6 +1954,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -20
       objectReference: {fileID: 0}
+    - target: {fileID: 4880511185732516078, guid: 04fe68be87153e2468933711b5a32333, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 733727928}
+    - target: {fileID: 4880511185732516078, guid: 04fe68be87153e2468933711b5a32333, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwitchScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 4880511185732516078, guid: 04fe68be87153e2468933711b5a32333, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1777700800}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04fe68be87153e2468933711b5a32333, type: 3}
 --- !u!1001 &1554270755038607603
