@@ -4,8 +4,11 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoSingleton<GameManager>
 {
+    public GameObject level;
     public InvadersController invaderGrid;
     public BunkersController bunkersController;
+    public MysteryShip mysteryShip;
+
     public Action OnScoreUpdated;
     public Action OnHighScoreBeaten;
 
@@ -23,11 +26,14 @@ public class GameManager : MonoSingleton<GameManager>
     {
         //Fix the max FPS count at 60
         Application.targetFrameRate = 60;
+        level.SetActive(false);
     }
 
     public void StartGame()
     {
         InputController.Instance.IsActive = true;
+
+        level.SetActive(true);
 
         Player.Instance.Initialize();
         Player.Instance.hitbox.OnDestroy += FinishGame;
@@ -36,6 +42,8 @@ public class GameManager : MonoSingleton<GameManager>
         invaderGrid.Initialize();
         invaderGrid.OnGridClear += NewWave;
         invaderGrid.OnBaseInvaded += FinishGame;
+
+        mysteryShip.Initialize();
 
         bunkersController.SpawnBunkers();
 
@@ -53,6 +61,11 @@ public class GameManager : MonoSingleton<GameManager>
         invaderGrid.StopInvaders();
         invaderGrid.OnGridClear -= NewWave;
         invaderGrid.OnBaseInvaded -= FinishGame;
+
+        if (mysteryShip != null)
+        {
+            mysteryShip.Deactivate();
+        }
 
         bunkersController.DestroyAllBunkers();
 

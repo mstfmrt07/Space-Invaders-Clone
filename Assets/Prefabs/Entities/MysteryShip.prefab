@@ -187,13 +187,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f513ba08f454d8b42a0cf7086152eb5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shooter: {fileID: 7422886778019782043}
   hitbox: {fileID: 1855003560864004879}
   explosionEffect: {fileID: 8546142110743470167}
-  rewardScore: 0
-  rewardRange:
-    min: 0
-    max: 0
+  possibleRewards: 320000006400000096000000
+  surpriseReward: 300
+  invisibleDuration: 25
+  movementSpeed: 6
+  movementRange:
+    min: -18
+    max: 18
 --- !u!114 &7422886778019782043
 MonoBehaviour:
   m_ObjectHideFlags: 0
