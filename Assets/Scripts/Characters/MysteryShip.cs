@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class MysteryShip : MonoBehaviour
 {
+    [Header("References")]
     public Hitbox hitbox;
     public ExplosionEffect explosionEffect;
+
+    [Header("Values")]
+    public float invisibleDuration;
     public List<int> possibleRewards;
     public int surpriseReward;
-    public float invisibleDuration;
+
+    [Header("Movement")]
     public float movementSpeed;
     public Range<float> movementRange;
 

@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoSingleton<GameManager>
 {
+    [Header("References")]
     public GameObject level;
     public InvadersController invaderGrid;
     public BunkersController bunkersController;

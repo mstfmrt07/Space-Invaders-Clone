@@ -4,6 +4,7 @@ using DG.Tweening;
 
 public class UIManager : MonoSingleton<UIManager>
 {
+    [Header("References")]
     public GameObject startScreen;
     public GameObject gameScreen;
     public GameObject gameOverScreen;

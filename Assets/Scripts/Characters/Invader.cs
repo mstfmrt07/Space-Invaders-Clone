@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Invader : MonoBehaviour
 {
+    [Header("References")]
     public Shooter shooter;
     public Hitbox hitbox;
     public ExplosionEffect explosionEffect;
-    public int rewardScore;
     public LayerMask boundaryLayer;
+
+    [Header("Values")]
+    public int rewardScore;
 
     private bool isActive;
     public bool IsActive => isActive;

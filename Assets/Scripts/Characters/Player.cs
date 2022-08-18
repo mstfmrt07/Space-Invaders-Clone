@@ -3,11 +3,14 @@ using DG.Tweening;
 
 public class Player : MonoSingleton<Player>
 {
-    public Range<float> movementRange;
-    public float movementSpeed;
+    [Header("References")]
     public Shooter shooter;
     public Hitbox hitbox;
     public ExplosionEffect explosionEffect;
+
+    [Header("Values")]
+    public Range<float> movementRange;
+    public float movementSpeed;
 
     private bool canMove;
 
