@@ -1460,7 +1460,7 @@ MonoBehaviour:
   gameOverScreen: {fileID: 309219884}
   highscoreText: {fileID: 829233756}
   scoreText: {fileID: 1099793513}
-  wavesText: {fileID: 0}
+  wavesText: {fileID: 1212283135}
   endHighscoreText: {fileID: 1537410202}
   endScoreText: {fileID: 1488255844}
   endWavesText: {fileID: 513910139}
@@ -2786,7 +2786,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 149bc7426e90e454cb68077aaea46628, type: 3}
     m_FontSize: 14
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 42

@@ -36,7 +36,7 @@ public class GameManager : MonoSingleton<GameManager>
         invaderGrid.OnGridClear += NewWave;
         invaderGrid.OnBaseInvaded += FinishGame;
 
-        UIManager.Instance.SwitchScreen(UIManager.Instance.gameScreen);
+        UIManager.Instance.OnGameStarted();
     }
 
     public void FinishGame()
@@ -51,13 +51,13 @@ public class GameManager : MonoSingleton<GameManager>
         invaderGrid.OnGridClear -= NewWave;
         invaderGrid.OnBaseInvaded -= FinishGame;
 
-        UIManager.Instance.ShowScreen(UIManager.Instance.gameOverScreen);
-
         //Save new high score if player beats the old one.
         if (score > SaveManager.Instance.HighScore)
         {
             SaveManager.Instance.HighScore = score;
         }
+
+        UIManager.Instance.OnGameFinished();
     }
 
     public void RestartGame()
