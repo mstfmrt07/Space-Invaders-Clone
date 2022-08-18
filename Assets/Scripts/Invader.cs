@@ -14,7 +14,7 @@ public class Invader : MonoBehaviour
     public bool IsActive => isActive;
     public Action<Invader> OnDestroy;
 
-    protected virtual void Awake()
+    private void Awake()
     {
         Initialize();
     }
@@ -26,13 +26,13 @@ public class Invader : MonoBehaviour
         hitbox.OnDestroy += OnInvaderDestroy;
     }
 
-    protected virtual void OnGetDamage(Vector3 damagePos, int damage)
+    private void OnGetDamage(Vector3 damagePos, int damage)
     {
         Camera.main.DOShakePosition(0.1f, strength: 0.3f, vibrato: 20);
         explosionEffect.Play(damagePos);
     }
 
-    protected virtual void OnInvaderDestroy()
+    private void OnInvaderDestroy()
     {
         OnDestroy?.Invoke(this);
         hitbox.OnGetDamage -= OnGetDamage;

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoSingleton<GameManager>
 {
     public InvadersController invaderGrid;
+    public BunkersController bunkersController;
     public Action OnScoreUpdated;
     public Action OnHighScoreBeaten;
 
@@ -36,6 +37,8 @@ public class GameManager : MonoSingleton<GameManager>
         invaderGrid.OnGridClear += NewWave;
         invaderGrid.OnBaseInvaded += FinishGame;
 
+        bunkersController.SpawnBunkers();
+
         UIManager.Instance.OnGameStarted();
     }
 
@@ -50,6 +53,8 @@ public class GameManager : MonoSingleton<GameManager>
         invaderGrid.StopInvaders();
         invaderGrid.OnGridClear -= NewWave;
         invaderGrid.OnBaseInvaded -= FinishGame;
+
+        bunkersController.DestroyAllBunkers();
 
         //Save new high score if player beats the old one.
         if (score > SaveManager.Instance.HighScore)
@@ -88,8 +93,11 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void NewWave()
     {
-        invaderGrid.StopInvaders();
         wavesClear++;
+
+        invaderGrid.StopInvaders();
+
+        bunkersController.SpawnBunkers();
         invaderGrid.Initialize();
     }
 
