@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Player
+  - Water
+  - UI
+  - Bunker
+  - Invader
+  - Laser
+  - MysteryShip
+  - Boundary
+  - Missile
+  - Post Processing
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Bunker
+    uniqueID: 2476463889
+    locked: 0
+  - name: Player
+    uniqueID: 1946353735
+    locked: 0
+  - name: MysteryShip
+    uniqueID: 3187489037
+    locked: 0
+  - name: Enemy
+    uniqueID: 4288398301
+    locked: 0
+  - name: Bullet
+    uniqueID: 1504997773
+    locked: 0
+  - name: Particle Effects
+    uniqueID: 1915904099
+    locked: 0
+  - name: UI
+    uniqueID: 3778690689
+    locked: 0
