@@ -59,7 +59,7 @@ public class UIManager : MonoSingleton<UIManager>
         var high = SaveManager.Instance.HighScore;
 
         endScoreText.text = "SCORE:\t" + score.ToString("000000");
-        endWavesText.text = "WAWES:\t" + waves.ToString("00");
+        endWavesText.text = "WAVES:\t" + waves.ToString("00");
         endHighscoreText.text = "HIGH:\t" + high.ToString("000000");
     }
 
@@ -70,7 +70,7 @@ public class UIManager : MonoSingleton<UIManager>
         var high = SaveManager.Instance.HighScore;
 
         scoreText.text = "SCORE: " + score.ToString("000000");
-        wavesText.text = "WAWES\n" + waves.ToString("00");
+        wavesText.text = "WAVES\n" + waves.ToString("00");
 
         if (score > high)
         {
